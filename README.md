@@ -5,6 +5,13 @@ Making webshell and terminal supports [trzsz](https://trzsz.github.io/) ( trz / 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://choosealicense.com/licenses/mit/)
 [![npmjs trzsz](https://img.shields.io/npm/v/trzsz.svg?style=flat)](https://www.npmjs.com/package/trzsz)
 
+#前言
+我在实现 https://github.com/trzsz/trzsz.js （ 在浏览器中类似 rz / sz 那样上传和下载文件 ）时，发现了 Chrome 等浏览器支持 js 读写本地文件，详见 https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API
+
+一开始实现的 trzsz ( trz / tsz ) 只支持上传和下载文件，不支持目录，所以没太关注目录方面的描述。等到后来 trzsz ( trz / tsz ) 开始支持上传和下载目录，想当然认为 js 能在浏览器中读写文件已经很好了，没想着 js 是否也可以在浏览器中读写目录。
+
+直到有人问起 trzsz ( trz / tsz ) 在浏览器中是不支持目录传输吗，又再去看了一次 API 文档，才发现目录相关的 API 被我忽略了。js 有读写目录的权限，https://github.com/trzsz/trzsz.js 就可以和其他终端一样，上传和下载目录了，下载多个文件时也不用多次弹出对话框了。Cool…
+
 
 ## Why?
 
